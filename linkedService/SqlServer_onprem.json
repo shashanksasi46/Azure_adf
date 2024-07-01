@@ -1,0 +1,26 @@
+{
+	"name": "SqlServer_onprem",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"parameters": {
+			"Database_name": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "SHASHANK",
+			"database": "@{linkedService().Database_name}",
+			"encrypt": "mandatory",
+			"trustServerCertificate": true,
+			"authenticationType": "SQL",
+			"userName": "ss_server01",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJmMmM0MTgwNy1hYmZkLTRlOTktOTRhOS1mNDIzNDk0YWNjOTYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "selfhosted01",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
