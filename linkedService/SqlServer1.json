@@ -1,0 +1,32 @@
+{
+	"name": "SqlServer1",
+	"properties": {
+		"parameters": {
+			"Database_name": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "SHASHANK",
+			"database": "@{linkedService().Database_name}",
+			"encrypt": "mandatory",
+			"trustServerCertificate": true,
+			"authenticationType": "SQL",
+			"userName": "ss_server01",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "sqlserver"
+			}
+		},
+		"connectVia": {
+			"referenceName": "selfhosted01",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
