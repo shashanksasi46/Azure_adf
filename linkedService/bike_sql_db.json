@@ -1,0 +1,18 @@
+{
+	"name": "bike_sql_db",
+	"properties": {
+		"description": "Linked services for Bike Stores database which contains various sales data",
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "sql-bikedb"
+			}
+		}
+	}
+}
