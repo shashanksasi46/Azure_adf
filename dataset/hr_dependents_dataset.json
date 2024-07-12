@@ -1,0 +1,43 @@
+{
+	"name": "hr_dependents_dataset",
+	"properties": {
+		"description": "Dependents data from the HR Data in the on premises  SQL server",
+		"linkedServiceName": {
+			"referenceName": "SqlServer1",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"Database_name": "HR Data"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "dependent_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "first_name",
+				"type": "varchar"
+			},
+			{
+				"name": "last_name",
+				"type": "varchar"
+			},
+			{
+				"name": "relationship",
+				"type": "varchar"
+			},
+			{
+				"name": "employee_id",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "dependents"
+		}
+	}
+}
