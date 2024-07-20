@@ -1,0 +1,64 @@
+{
+	"name": "gen_02_dataset",
+	"properties": {
+		"description": "Dataset for the \"sample-gen01\" container",
+		"linkedServiceName": {
+			"referenceName": "ls_gen2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "sample-gen01"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "1",
+				"type": "String"
+			},
+			{
+				"name": "Eldon Base for stackable storage shelf, platinum",
+				"type": "String"
+			},
+			{
+				"name": "Muhammed MacIntyre",
+				"type": "String"
+			},
+			{
+				"name": "3",
+				"type": "String"
+			},
+			{
+				"name": "-213.25",
+				"type": "String"
+			},
+			{
+				"name": "38.94",
+				"type": "String"
+			},
+			{
+				"name": "35",
+				"type": "String"
+			},
+			{
+				"name": "Nunavut",
+				"type": "String"
+			},
+			{
+				"name": "Storage & Organization",
+				"type": "String"
+			},
+			{
+				"name": "0.8",
+				"type": "String"
+			}
+		]
+	}
+}
